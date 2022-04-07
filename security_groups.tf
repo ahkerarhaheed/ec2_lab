@@ -12,7 +12,15 @@ resource "aws_security_group" "my_public_app_sg" {
     cidr_blocks = ["0.0.0.0/0"]
   }
 
-  # OUTBOUT CONNECTIONS
+  ingress {
+    description = "Allow HTTP into the EC2"
+    from_port   = 80
+    to_port     = 80
+    protocol    = "tcp"
+    cidr_blocks = ["77.101.32.173/32"] # 0.0.0.0/0ssh-keygenls
+  }
+
+  # OUTBOUND CONNECTIONS
   egress {
     description = "Allow access to the world"
     from_port   = 0
