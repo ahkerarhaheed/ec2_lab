@@ -29,7 +29,7 @@ variable "private_subnet_name" {
 }
 
 variable "my_keypair" {
-  default = "aws_keypair"
+  default = "AWS_keypair"
 }
 
 variable "number_of_private_instances" {
