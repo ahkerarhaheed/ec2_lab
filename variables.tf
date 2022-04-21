@@ -24,10 +24,14 @@ variable "public_subnet_name" {
   type = string
 }
 
-variable "my_keypair" {
-  default = "aws_keypair"
+variable "private_subnet_name" {
+  type = string
 }
 
-variable "number_of_instances" {
-  description = "Amount of instances for my public subnet"
+variable "my_keypair" {
+  default = "AWS_keypair"
+}
+
+variable "number_of_private_instances" {
+  description = "Amount of instances for my Private subnet"
 }
